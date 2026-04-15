@@ -1,0 +1,25 @@
+# dataset.yaml — YOLO dataset configuration for Snow Pole Detection
+#
+# This file tells YOLOv8 where to find images and labels,
+# and what classes to detect.
+#
+# Expected folder structure:
+#   data/
+#     images/
+#       train/   ← training images (.jpg / .png)
+#       val/     ← validation images
+#     labels/
+#       train/   ← YOLO-format .txt label files (one per image)
+#       val/
+
+# Paths are relative to the project root (where you run train.py from)
+path: data          # root data directory
+train: images/train # training images (relative to 'path')
+val: images/val     # validation images (relative to 'path')
+
+# Number of classes
+nc: 1
+
+# Class names (index 0 = snow_pole)
+names:
+  0: snow_pole

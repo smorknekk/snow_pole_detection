@@ -1,0 +1,35 @@
+# config.yaml — Training hyperparameters for Snow Pole Detection
+#
+# These settings are loaded by train.py before starting training.
+# Feel free to tweak them as you experiment!
+
+# --- Model ---
+model: yolov8n.pt       # Pretrained YOLOv8 nano checkpoint (smallest & fastest)
+                        # Other options: yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
+
+# --- Data ---
+dataset: configs/dataset.yaml   # Path to the dataset config (relative to project root)
+
+# --- Training ---
+epochs: 50              # How many full passes over the training data
+batch_size: 16          # Images per training step (lower if you run out of memory)
+image_size: 640         # Input resolution; YOLOv8 default is 640x640
+workers: 4              # Parallel data-loading workers
+
+# --- Optimizer ---
+lr0: 0.01               # Initial learning rate
+lrf: 0.01               # Final learning rate (as a fraction of lr0, for scheduler)
+momentum: 0.937         # SGD momentum
+weight_decay: 0.0005    # L2 regularization
+
+# --- Augmentation ---
+augment: true           # Enable built-in YOLOv8 augmentations (recommended)
+
+# --- Output ---
+project: outputs        # Parent folder for saved runs
+name: snow_pole_run     # Sub-folder name for this run's results
+save_period: 10         # Save a checkpoint every N epochs (0 = only save best/last)
+
+# --- Hardware ---
+device: ""              # "" = auto-select (GPU if available, else CPU)
+                        # Set to "0" for GPU 0, "cpu" to force CPU

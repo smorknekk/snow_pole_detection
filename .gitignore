@@ -1,0 +1,43 @@
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ── Virtual environment ──────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── Environment variables (may contain secrets) ──────────────────────
+.env
+
+# ── YOLOv8 / Ultralytics auto-downloads ─────────────────────────────
+*.pt          # model weights (can be large)
+*.onnx        # exported ONNX models
+
+# ── Training outputs ─────────────────────────────────────────────────
+outputs/      # all run results, plots, and saved weights
+
+# ── Dataset images & labels (can be very large) ──────────────────────
+data/images/
+data/labels/
+
+# ── Jupyter notebooks checkpoints ───────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_metadata
+
+# ── macOS junk ───────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── VS Code ──────────────────────────────────────────────────────────
+.vscode/
+
+# ── General ──────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
