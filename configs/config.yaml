@@ -8,7 +8,7 @@ model: yolov8n.pt       # Pretrained YOLOv8 nano checkpoint (smallest & fastest)
                         # Other options: yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
 
 # --- Data ---
-dataset: configs/dataset.yaml   # Path to the dataset config (relative to project root)
+dataset: /work/maxhm/snow_pole_detection/configs/dataset.yaml   # Path to the dataset config (relative to project root)
 
 # --- Training ---
 epochs: 50              # How many full passes over the training data

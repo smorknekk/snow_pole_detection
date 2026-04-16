@@ -2,24 +2,14 @@
 #
 # This file tells YOLOv8 where to find images and labels,
 # and what classes to detect.
-#
-# Expected folder structure:
-#   data/
-#     images/
-#       train/   ← training images (.jpg / .png)
-#       val/     ← validation images
-#     labels/
-#       train/   ← YOLO-format .txt label files (one per image)
-#       val/
-
 # Paths are relative to the project root (where you run train.py from)
-path: data          # root data directory
-train: images/train # training images (relative to 'path')
-val: images/val     # validation images (relative to 'path')
+path: /datasets/tdt4265/Poles2025/roadpoles_v1        # root data directory
+train: train/images # training images (relative to 'path')
+val: valid/images     # validation images (relative to 'path')
 
 # Number of classes
 nc: 1
 
-# Class names (index 0 = snow_pole)
+# Class names (index 0 = pole)
 names:
-  0: snow_pole
+  0: pole
