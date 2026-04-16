@@ -1,3 +1,11 @@
+# dataset_combined.yaml — Combined dataset for Snow Pole Detection
+#
+# Combines roadpoles_v1 (dashcam) and Road_poles_iPhone for broader training.
+# roadpoles_v1:     322 train / 92 val images
+# Road_poles_iPhone: 942 train images
+# Total train: ~1264 images
+
+# Ultralytics supports multiple train paths as a list
 train:
   - /datasets/tdt4265/Poles2025/roadpoles_v1/train/images
   - /datasets/tdt4265/Poles2025/Road_poles_iPhone/images/Train/train
@@ -6,6 +14,9 @@ val:
   - /datasets/tdt4265/Poles2025/roadpoles_v1/valid/images
   - /datasets/tdt4265/Poles2025/Road_poles_iPhone/images/Validation/val
 
+# Number of classes
 nc: 1
+
+# Class names
 names:
   0: pole

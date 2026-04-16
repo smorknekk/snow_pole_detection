@@ -1,0 +1,34 @@
+# config.yaml — Training hyperparameters for Snow Pole Detection
+#
+# These settings are loaded by train.py before starting training.
+# Feel free to tweak them as you experiment!
+
+# --- Model ---
+model: rtdetr-l.pt      # RT-DETR large checkpoint (downloads automatically)
+
+# --- Data ---
+dataset: /work/avivan/snow_pole_detection/configs/dataset_combined.yaml   # Path to the dataset config (relative to project root)
+
+# --- Training ---
+epochs: 100              # How many full passes over the training data
+batch_size: 8         # Images per training step (lower if you run out of memory)
+image_size: 640         # Input resolution; YOLOv8 default is 640x640
+workers: 4              # Parallel data-loading workers
+
+# --- Optimizer ---
+lr0: 0.0001               # Initial learning rate
+lrf: 0.01               # Final learning rate (as a fraction of lr0, for scheduler)
+weight_decay: 0.0001    # L2 regularization
+
+# --- Augmentation ---
+augment: true           # Enable built-in YOLOv8 augmentations (recommended)
+
+# --- Output ---
+project: outputs        # Parent folder for saved runs
+name: snow_pole_rtdetr  # Sub-folder name for this run's results
+save_period: 10         # Save a checkpoint every N epochs (0 = only save best/last)
+
+# --- Hardware ---
+device: ""              # "" = auto-select (GPU if available, else CPU)
+                        # Set to "0" for GPU 0, "cpu" to force CPU
+ 
