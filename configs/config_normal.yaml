@@ -1,0 +1,27 @@
+#MODEL
+model: yolov8s.pt  #options: yolov8n.pt, yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
+
+#DATA
+dataset: /work/maxhm/snow_pole_detection/configs/dataset.yaml
+
+#TRAIN
+epochs: 167
+batch_size: 16
+image_size: 640
+workers: 4
+
+#OPTIMIZER
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+
+#AUG
+augment: true
+
+#OUTPUT
+project: outputs
+name: snow_pole_normal_s
+save_period: 10  #checkpoint freq
+
+device: ""  #auto-select

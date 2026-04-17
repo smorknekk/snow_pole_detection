@@ -1,7 +1,8 @@
+import sys
 import yaml
 from ultralytics import YOLO
 
-config_path = "configs/config.yaml"
+config_path = sys.argv[1] if len(sys.argv) > 1 else "configs/config.yaml"
 
 with open(config_path, "r") as f:
     cfg = yaml.safe_load(f) #config like dictonray
